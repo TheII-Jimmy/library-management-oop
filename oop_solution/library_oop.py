@@ -37,9 +37,13 @@ class Member:
 		self.member_email = member_email
 		self.borrowed_book_list = borrowed_book_list
 
-	def add_borrow_book_list(self, added_book):
-		"""Add the borrowed book to member borrow book list"""
+	def add_borrowed_book_list(self, added_book):
+		"""Add the borrowed book to member borrowed book list"""
 		self.borrowed_book_list.append(added_book)
+
+	def remove_borrowed_book_list(self, book):
+		"""Remove the following book from member borrowed book list"""
+		self.borrowed_book_list.remove(book)
 
 class Library:
 	"""Storing book and member list, do all the methods"""
